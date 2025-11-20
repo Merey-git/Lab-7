@@ -3,6 +3,8 @@ package com.example.lab7.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -16,4 +18,8 @@ public class ProductDto {
     private Integer quantity;
     private String description;
     private String brand;
+
+    private List<ReviewDto> reviews;
+
+    private Set<CategoryDto> categories;
 }

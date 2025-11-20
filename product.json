@@ -1,131 +1,436 @@
 {
   "info": {
-    "_postman_id": "12345678-1234-1234-1234-123456789abc",
-    "name": "Lab 7 - Fashion Product CRUD API",
-    "description": "Full CRUD operations for Product entity",
+    "_postman_id": "87654321-8888-8888-8888-lab8collection",
+    "name": "Lab 8 - Online Fashion Store",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
-      "name": "Create Product",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+      "name": "1. Categories",
+      "item": [
+        {
+          "name": "Create Category - Summer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Summer Collection\",\n    \"description\": \"Light and breathable summer clothes\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/categories",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "categories"]
+            }
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"name\": \"Classic White T-Shirt\",\n    \"category\": \"T-Shirts\",\n    \"price\": 29.99,\n    \"quantity\": 150,\n    \"description\": \"100% cotton comfortable white t-shirt\",\n    \"brand\": \"Nike\"\n}"
         },
-        "url": {
-          "raw": "http://localhost:8081/api/products",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8081",
-          "path": [
-            "api",
-            "products"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get All Products",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8081/api/products",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8081",
-          "path": [
-            "api",
-            "products"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get Product By ID",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8081/api/products/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8081",
-          "path": [
-            "api",
-            "products",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Update Product",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+        {
+          "name": "Create Category - Winter",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Winter Collection\",\n    \"description\": \"Warm winter clothing\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/categories",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "categories"]
+            }
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"name\": \"Classic White T-Shirt - SALE\",\n    \"category\": \"T-Shirts\",\n    \"price\": 19.99,\n    \"quantity\": 150,\n    \"description\": \"100% cotton comfortable white t-shirt - 33% OFF!\",\n    \"brand\": \"Nike\"\n}"
         },
-        "url": {
-          "raw": "http://localhost:8081/api/products/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8081",
-          "path": [
-            "api",
-            "products",
-            "1"
-          ]
+        {
+          "name": "Create Category - Sport",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Sport Collection\",\n    \"description\": \"Athletic and activewear\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/categories",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "categories"]
+            }
+          }
+        },
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/categories",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "categories"]
+            }
+          }
+        },
+        {
+          "name": "Get Category By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/categories/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "categories", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/categories/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "categories", "3"]
+            }
+          }
         }
-      },
-      "response": []
+      ]
     },
     {
-      "name": "Delete Product",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8081/api/products/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8081",
-          "path": [
-            "api",
-            "products",
-            "1"
-          ]
+      "name": "2. Products",
+      "item": [
+        {
+          "name": "Create Product - T-Shirt with Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Classic White T-Shirt\",\n    \"category\": \"T-Shirts\",\n    \"price\": 29.99,\n    \"quantity\": 150,\n    \"description\": \"100% cotton comfortable white t-shirt\",\n    \"brand\": \"Nike\",\n    \"categories\": [\n        {\"id\": 1}\n    ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products"]
+            }
+          }
+        },
+        {
+          "name": "Create Product - Jeans Multi-Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Blue Denim Jeans\",\n    \"category\": \"Jeans\",\n    \"price\": 79.99,\n    \"quantity\": 80,\n    \"description\": \"Classic blue denim jeans, slim fit\",\n    \"brand\": \"Levi's\",\n    \"categories\": [\n        {\"id\": 1},\n        {\"id\": 2}\n    ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products"]
+            }
+          }
+        },
+        {
+          "name": "Create Product - Winter Jacket",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Winter Puffer Jacket\",\n    \"category\": \"Jackets\",\n    \"price\": 199.99,\n    \"quantity\": 30,\n    \"description\": \"Warm insulated winter jacket\",\n    \"brand\": \"North Face\",\n    \"categories\": [\n        {\"id\": 2}\n    ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products"]
+            }
+          }
+        },
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products"]
+            }
+          }
+        },
+        {
+          "name": "Get Product By ID with Relations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Classic White T-Shirt - SALE\",\n    \"category\": \"T-Shirts\",\n    \"price\": 19.99,\n    \"quantity\": 150,\n    \"description\": \"100% cotton comfortable white t-shirt - 33% OFF!\",\n    \"brand\": \"Nike\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/products/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products", "3"]
+            }
+          }
         }
-      },
-      "response": []
+      ]
+    },
+    {
+      "name": "3. Reviews",
+      "item": [
+        {
+          "name": "Create Review - 5 Stars",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"authorName\": \"John Smith\",\n    \"rating\": 5,\n    \"comment\": \"Excellent quality! Very comfortable and fits perfectly.\",\n    \"productId\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reviews",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "reviews"]
+            }
+          }
+        },
+        {
+          "name": "Create Review - 4 Stars",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"authorName\": \"Emma Wilson\",\n    \"rating\": 4,\n    \"comment\": \"Good t-shirt, but runs a bit small. Order one size up.\",\n    \"productId\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reviews",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "reviews"]
+            }
+          }
+        },
+        {
+          "name": "Create Review - 3 Stars",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"authorName\": \"Michael Brown\",\n    \"rating\": 3,\n    \"comment\": \"Average quality. Color faded after a few washes.\",\n    \"productId\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reviews",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "reviews"]
+            }
+          }
+        },
+        {
+          "name": "Create Review - For Jeans",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"authorName\": \"Sarah Johnson\",\n    \"rating\": 5,\n    \"comment\": \"Perfect fit! These jeans are amazing quality.\",\n    \"productId\": 2\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reviews",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "reviews"]
+            }
+          }
+        },
+        {
+          "name": "Get Reviews By Product ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/reviews/product/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "reviews", "product", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Review By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/reviews/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "reviews", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Review",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/reviews/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "reviews", "3"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Test Scenarios",
+      "item": [
+        {
+          "name": "Scenario: Get Product with All Relations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Scenario: Get All Products with Relations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "products"]
+            }
+          }
+        }
+      ]
     }
   ]
 }
